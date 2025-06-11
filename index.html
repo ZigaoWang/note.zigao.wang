@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zigao Wang — Notes & Resources</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -151,10 +152,11 @@
     }
     
     .search-toggle::after {
-      content: '⌄';
+      font-family: 'remixicon';
+      content: "\ea4e";
       margin-left: 8px;
       transition: transform 0.3s ease;
-      font-size: 14px;
+      font-size: 20px;
     }
     
     .search-toggle.active::after {
@@ -222,7 +224,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 20px;
       backdrop-filter: blur(20px);
     }
     
@@ -232,12 +234,11 @@
       box-shadow: 0 4px 16px rgba(0, 113, 227, 0.4);
     }
     
-    .search-btn::before {
-      content: '→';
+    .search-btn i {
       transition: transform 0.2s ease;
     }
     
-    .search-btn:hover::before {
+    .search-btn:hover i {
       transform: translateX(2px);
     }
     
@@ -297,14 +298,13 @@
       box-shadow: 0 8px 32px rgba(0, 113, 227, 0.2);
     }
     
-    .cta-link::after {
-      content: '→';
+    .cta-link i {
       margin-left: 12px;
       transition: transform 0.3s ease;
-      font-size: 18px;
+      font-size: 24px;
     }
     
-    .cta-link:hover::after {
+    .cta-link:hover i {
       transform: translateX(4px);
     }
     
@@ -439,15 +439,18 @@
             pattern="[a-zA-Z0-9\-]+"
             title="Only letters, numbers, and hyphens allowed"
           >
-          <button type="submit" class="search-btn"></button>
+          <button type="submit" class="search-btn">
+            <i class="ri-arrow-right-line"></i>
+          </button>
         </form>
-        <div class="search-example">Example: world-history-2025, machine-learning-basics</div>
+        <div class="search-example">Example: world-history-2025, chemical-reaction</div>
       </div>
     </div>
     
     <div class="cta-container">
       <a href="https://www.zigao.wang" class="cta-link">
         Visit personal website
+        <i class="ri-arrow-right-line"></i>
       </a>
       <div class="domain">www.zigao.wang</div>
     </div>
